@@ -1,0 +1,282 @@
+/*var*/
+$primary: #ff1744
+$secundary: #fe6e30
+$accent: #0d183e
+$dark: #212121
+$opacity: rgba(0,0,0,.4)
+$mfont: 'Montserrat', sans-serif
+$rfont: 'Roboto', san-serif
+
+*
+    scroll-behavior: smooth
+body
+    background: url('./images/main-background.png')
+    background-repeat: no-repeat
+    background-size: cover
+    margin: 0
+    padding: 0
+    font-family: 'Monserrat', san-serif
+    box-sizing: border-box
+    font-display: swap
+
+header
+    width: stretch
+    padding: 10px 130px
+    height: 102px
+    display: grid
+    position: fixed
+    z-index: 500
+    background: $opacity
+    grid-template-columns: 80px 100px 1fr 20px
+    color:#fff
+    font-family: $rfont
+    font-weight: bold
+    
+    img
+        padding-top: 5px
+    .header__lang
+        margin-top: 47px
+        margin-left: -15px
+        i
+            cursor: pointer
+        .lang--esp
+            display: none
+            position: absolute
+            padding-top: 5px
+            margin-bottom: 5px
+        a:hover
+            color: #eaf778
+    a
+        text-decoration: none
+        color: #fff
+    #menu
+        margin-right: -20px
+        ul
+            list-style-type: none
+            text-align: end
+            li
+                display: inline-block
+                line-height: 1.5
+                padding: 10px
+                a
+                    color: #fff
+                    text-decoration: none
+        a:hover
+            color: #eaf778
+    .menu--toggle
+        line-height: 100px
+        font-size: 25px
+        cursor: pointer
+        position: absolute
+        right: 130px
+        border: none
+        display: none
+.show
+    height: fit-content !important
+.lang-show
+    display: block !important
+
+.legal-container
+    padding: 130px
+    color: #fff
+    text-align: justify
+    line-height: 1.25
+    h2
+        text-align: center
+        font-weight: 800
+        font-size: 30px
+    h3
+        font-size: 25px
+    
+
+#menu ul li:last-child
+    padding-right: 0
+
+footer
+    background-color: $opacity
+    display: flex
+    justify-content: space-between
+    padding: 40px 130px
+    line-height: 1.25
+    .footer__img
+        width: 60%
+        padding-top: 40px
+        img
+            width: 60%
+    .footer__information
+        margin-right: 15px
+        h3
+            font-size: 25px
+            color: #fff
+        ul
+            padding: 0
+            list-style-type: none
+            a
+                color: #fff
+                text-decoration: none
+                &:hover
+                    color: #eaf778
+    .footer__contact
+        color: #fff
+        h3
+            font-size: 25px
+            color: #fff
+        ul
+            padding: 0
+            list-style-type: none
+            a
+                color:#fff
+                text-decoration: none
+                &:hover
+                    color: #eaf778
+/*End footer*/
+
+.cookies__banner
+    display: none
+    background-color: #fff
+    padding: 20px
+    width: calc( 100% - 40px )
+    max-width: 300px
+    line-height: 150%
+    border-radius: 10px
+    position: fixed
+    bottom: 20px
+    left: 20px
+    z-index: 900
+    padding-top: 40px
+    box-shadow: 0 2px 20px 10px rgba(222, 222, 222, .25)
+    text-align: center
+    .cookie__img
+        max-width: 100px
+        position: absolute
+        top: -50px
+        left: calc( 50% - 50px )
+    .cookie__title
+        font-size: 25px
+        color: $accent
+    .cookie__text
+        color: $accent
+        font-size: 18px
+        font-weight: 800
+    .cookie__button
+        background-color: $primary
+        color: #fff
+        width: 100%
+        padding: 10px
+        font-size: 25px
+        border: none
+        border-radius: 5px
+    .cookie__policy
+        display: block
+        padding-top: 10px
+        color: $accent
+        text-decoration: none
+.cookies__banner.active
+    display: block
+.background__cookies
+    display: none
+    background-color: $opacity
+    position: fixed
+    z-index: 899
+    width: 100vw
+    height: 100vh
+    top: 0
+    left: 0
+.background__cookies.active
+    display: block
+.cookie__button:active
+    background-color: #bb0e31
+/*End cookies banner*/
+
+.whatsapp__button
+    position: fixed
+    bottom: 20px
+    left: 20px
+    color: #fff
+    img
+        width: 50px
+/*End whatsapp button*/
+
+#scroll-to-top__button
+    position: fixed
+    width: 50px
+    height: 50px
+    bottom: 20px
+    right: 20px
+    background-color: $opacity
+    border-radius: 50%
+    text-align: center
+    i
+        color: #fff
+        font-size: 50px
+
+#scroll-to-top__button:hover
+    cursor: pointer
+    transform: scale(1.1)
+
+.ocult
+    opacity: 0
+
+.show__scroll
+    opacity: 1 
+/*End scroll to top*/
+
+.loader-container
+    width: 100vw
+    height: 100vh
+    position: fixed
+    background-color: $primary
+    display: flex
+    top: 0
+    align-items: center
+    justify-content: center
+    z-index: 10000
+    transition: .5s all
+    img
+        width: 350px
+/*End loader*/
+
+@media screen and ( max-width: 1024px)
+    header
+        padding: 10px 50px
+    /*END NAV*/
+    .legal-container
+        padding: 130px 50px
+    footer
+        padding: 50px
+    /*END FOOTER*/
+
+@media screen and (max-width: 768px)
+    
+    header
+        padding: 10px 20px
+        grid-template-columns: 100px 80px 1fr
+        .header__lang
+            margin: 0
+            margin-top: 50px
+            margin-left: -35px
+        #menu
+            margin-right: 0
+    /*END NAV*/
+
+    .legal-container
+        padding: 130px 20px
+    footer
+        display: block
+        padding: 20px
+        .footer__img
+            width: 100%
+            text-align: center
+            img
+                width: 60%
+        .footer__information, .footer__contact
+            text-align: center
+        h4
+            color: #fff
+            text-align: center
+            padding: 20px 
+
+@media screen and (max-width: 500px)
+    .loader-container
+        img
+            width: 250px

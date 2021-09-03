@@ -1,0 +1,715 @@
+/*var*/
+$primary: #ff1744
+$secundary: #fe6e30
+$accent: #0d183e
+$dark: #212121
+$opacity: rgba(0,0,0,.4)
+$mfont: 'Montserrat', sans-serif
+$rfont: 'Roboto', san-serif
+
+*
+    box-sizing: border-box
+    scroll-behavior: smooth
+
+body
+    background: url('./images/main-background.png')
+    background-repeat: no-repeat
+    background-size: cover
+    margin: 0
+    padding: 0
+    font-family: 'Monserrat', san-serif
+    box-sizing: border-box
+    font-display: swap
+    
+
+header
+    width: stretch
+    padding: 10px 130px
+    height: 102px
+    display: grid
+    position: fixed
+    z-index: 500
+    background: $opacity
+    grid-template-columns: 80px 100px 1fr 20px
+    color:#fff
+    font-family: $rfont
+    font-weight: bold
+    
+    img
+        padding-top: 5px
+    .header__lang
+        margin-top: 47px
+        margin-left: -15px
+        i
+            cursor: pointer
+        .lang--esp
+            display: none
+            position: absolute
+            padding-top: 5px
+            margin-bottom: 5px
+        a:hover
+            color: #eaf778
+    a
+        text-decoration: none
+        color: #fff
+    #menu
+        margin-right: -20px
+        ul
+            list-style-type: none
+            text-align: end
+            li
+                display: inline-block
+                line-height: 1.5
+                padding: 10px
+                a
+                    color: #fff
+                    text-decoration: none
+        a:hover
+            color: #eaf778
+    .menu--toggle
+        line-height: 100px
+        font-size: 25px
+        cursor: pointer
+        position: absolute
+        right: 130px
+        border: none
+        display: none
+.show
+    height: fit-content !important
+.lang-show
+    display: block !important
+
+
+#menu ul li:last-child
+    padding-right: 0
+
+
+/*End nav*/
+
+main
+    display: flex
+    justify-content: space-between
+    padding: 190px 130px 120px 130px
+    .main__text
+        padding-top: 40px
+        width: 70%
+        color: #fff
+        font-weight: 800
+        h3
+            font-size: 50px
+            line-height: .1
+        h2
+            font-size: 50px
+            line-height: .2
+        a
+            font-size: 20px
+            text-decoration: none
+            padding: 15px 25px
+            border: none
+            border-radius: 3px
+            background: rgba(255,255,255,.3)
+            color: #fff
+            font-weight: 600
+    .main__form
+        background: #fff
+        border-radius: 10px
+        width: 30%
+        padding: 30px 35px
+        h3
+            font-size: 25px
+            text-align: center
+            color: $accent
+            margin-bottom: 45px
+        input
+            width: 100%
+            border: 1px solid #ccc
+            padding: 10px
+            margin-bottom: 15px
+            border-radius: 4px
+        [type="submit"]
+            margin-top: 30px
+            background: $primary
+            padding: 10px 
+            color: #fff
+    [type="submit"]:active
+        background-color: #bb0e31
+
+/*End main*/
+.icons-container
+    padding: 20px 130px
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    .icon__love, .icon__sketch, .icon__coin
+        display: flex
+        color: #fff
+        font-size: 25px
+        i
+            line-height: 3.5
+            font-size: 25px
+            padding-left: 5px
+    .icon__sketch
+        justify-content: center
+    .icon__coin
+        justify-content: flex-end
+
+/*End icons*/
+#portfolio
+    padding: 50px 130px
+    .portfolio-container
+        background-color: $opacity
+        border-radius: 10px
+        padding: 20px
+        h2
+            color: #fff
+            font-size: 40px
+            text-align: center
+        .portfolio__gallery
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr
+            grid-gap: 10px
+            img
+                width: 100%
+                height: 218px
+            .gallery__image
+                position: relative
+                .image__overlay
+                    width: 100%
+                    height: 218px
+                    position: absolute
+                    top: 0
+                    left: 0
+                    right: 0
+                    bottom: 0
+                    color: #fff
+                    background-color: rgba(0, 0, 0, .8)
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    align-items: center
+                    opacity: 0
+                    transition: opacity .25s
+                    .image__description
+                        font-weight: 700
+                        font-size: 20px
+                    .image__button
+                        text-decoration: none
+                        color: #fff
+                        border: 2px solid #fff
+                        padding: 10px 15px
+                        font-weight: 800
+            .image__overlay:hover
+                opacity: 1
+                
+/*End portfolio*/
+
+.about-container
+    padding: 50px 130px
+    color: #fff
+    h2
+        text-align: center
+        font-size: 40px
+    .about__content
+        padding-top: 50px
+        display: flex
+        justify-content: space-around
+        .about__text
+            width: 50%
+            padding-top: 15px
+            padding-right: 20px
+            text-align: justify
+            line-height: 1.25
+            h3
+                font-size: 25px
+                line-height: 1
+            p
+                font-size: 20px
+            a
+                padding-right: 10px
+                font-size: 30px
+                color: #fff
+        img
+            width: 50%
+            border-radius: 5px
+/*End about*/
+
+.plans-container
+    padding: 50px 130px
+    h2
+        font-size: 40px
+        text-align: center
+        color: #fff
+        margin-bottom: 80px
+    .plans__flex
+        display: flex
+        .plans__element
+            width: 33%
+            background-color: #fff
+            border-radius: 10px
+            text-align: center
+            height: fit-content
+            div
+                background-color: $accent
+                padding: 15px
+                border-radius: 10px 10px 0 0
+                text-align: center
+                color: #fff
+                h3
+                    font-size: 25px
+                    font-weight: 800
+                    line-height: .1
+                h4
+                    margin-top: -5px
+                h2
+                    margin-bottom: 0
+            ul
+                padding: 50px
+                padding-top: 30px
+                li
+                    list-style-type: disclosure-closed
+                    padding-top: 15px
+                    border-bottom: 1px solid #c4c3c1
+                    font-weight: 800
+                    color: #7a7a7a
+                    text-align: left
+            .plans__button
+                background-color: #fff
+                padding-bottom: 50px
+                border-radius: 0 0 10px 10px     
+                a
+                    font-size: 20px
+                    background-color: $primary
+                    color: #fff
+                    padding: 15px 25px
+                    border-radius: 5px
+                    text-decoration: none
+    .plans__element:nth-child(2)
+        margin: 0 10px
+/*End plans*/
+
+footer
+    background-color: $opacity
+    display: flex
+    justify-content: space-between
+    padding: 40px 130px
+    line-height: 1.25
+    .footer__img
+        width: 60%
+        padding-top: 40px
+        img
+            width: 60%
+    .footer__information
+        margin-right: 15px
+        h3
+            font-size: 25px
+            color: #fff
+        ul
+            padding: 0
+            list-style-type: none
+            a
+                color: #fff
+                text-decoration: none
+                &:hover
+                    color: #eaf778
+    .footer__contact
+        color: #fff
+        h3
+            font-size: 25px
+            color: #fff
+        ul
+            padding: 0
+            list-style-type: none
+            a
+                color:#fff
+                text-decoration: none
+                &:hover
+                    color: #eaf778
+            
+
+/*End footer*/
+
+.cookies__banner
+    display: none
+    background-color: #fff
+    padding: 20px
+    width: calc( 100% - 40px )
+    max-width: 300px
+    line-height: 150%
+    border-radius: 10px
+    position: fixed
+    bottom: 20px
+    left: 20px
+    z-index: 900
+    padding-top: 40px
+    box-shadow: 0 2px 20px 10px rgba(222, 222, 222, .25)
+    text-align: center
+    .cookie__img
+        max-width: 100px
+        position: absolute
+        top: -50px
+        left: calc( 50% - 50px )
+    .cookie__title
+        font-size: 25px
+        color: $accent
+    .cookie__text
+        color: $accent
+        font-size: 18px
+        font-weight: 800
+    .cookie__button
+        background-color: $primary
+        color: #fff
+        width: 100%
+        padding: 10px
+        font-size: 25px
+        border: none
+        border-radius: 5px
+    .cookie__policy
+        display: block
+        padding-top: 10px
+        color: $accent
+        text-decoration: none
+.cookies__banner.active
+    display: block
+.background__cookies
+    display: none
+    background-color: $opacity
+    position: fixed
+    z-index: 899
+    width: 100vw
+    height: 100vh
+    top: 0
+    left: 0
+.background__cookies.active
+    display: block
+.cookie__button:active
+    background-color: #bb0e31
+/*End cookies banner*/
+
+.whatsapp__button
+    position: fixed
+    bottom: 20px
+    left: 20px
+    color: #fff
+    img
+        width: 50px
+/*End whatsapp button*/
+
+#scroll-to-top__button
+    position: fixed
+    width: 50px
+    height: 50px
+    bottom: 20px
+    right: 20px
+    background-color: $opacity
+    border-radius: 50%
+    text-align: center
+    i
+        color: #fff
+        font-size: 50px
+
+#scroll-to-top__button:hover
+    cursor: pointer
+    transform: scale(1.1)
+
+.ocult
+    opacity: 0
+
+.show__scroll
+    opacity: 1 
+/*End scroll to top*/
+
+.loader-container
+    width: 100vw
+    height: 100vh
+    position: fixed
+    background-color: $primary
+    display: flex
+    top: 0
+    align-items: center
+    justify-content: center
+    z-index: 10000
+    transition: .5s all
+    img
+        width: 350px
+/*End loader*/
+
+.submit-container
+    width: 100vw
+    height: 100vh
+    position: fixed
+    background-color: $opacity
+    top: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    z-index: 700
+    transition: .5s all
+    opacity: 0
+    visibility: hidden
+    
+    .submit__content
+        width: 40%
+        background-color: #fff
+        box-shadow: 0 2px 20px 10px rgba(222, 222, 222, .25)
+        border-radius: 5px
+        color: $primary
+        padding: 20px
+        text-align: center
+        position: relative
+        h2
+            font-size: 35px
+        h3
+            color: $accent
+            width: 50%
+            margin: 0 auto
+            line-height: 1.25
+            
+.submit-show
+    opacity: 1
+    visibility: visible
+
+ 
+
+/*MEDIAS*/
+@media screen and ( max-width: 1024px)
+    header
+        padding: 10px 50px
+    /*END NAV*/
+
+    main
+        padding: 130px 50px
+        padding-bottom: 30px
+        .main__text
+            margin-top: 40px
+            h3
+                font-size: 40px
+            h2
+                font-size: 40px
+    /*END MAIN*/
+    
+    .icons-container
+        padding: 0 50px
+    /*END ICONS*/
+
+    #portfolio
+        padding: 50px 50px
+        .portfolio-container
+            text-align: center
+            .portfolio__gallery
+                .gallery__image
+                    .image__overlay
+                        width: 100%
+                        height: 100px
+                        margin: 0 auto
+                        position: relative
+                        display: block
+                        opacity: 1
+                        background: none
+    /*END PORTFOLIO*/
+    
+    .about-container
+        padding: 50px 50px
+    /*END ABOUT*/
+
+    .plans-container
+        padding: 50px
+    /*END PLANS*/
+    
+    footer
+        padding: 50px
+    /*END FOOTER*/
+    
+    .submit-container
+        .submit__content
+            width: 80%
+            background-color: #fff
+            box-shadow: 0 2px 20px 10px rgba(222, 222, 222, .25)
+            border-radius: 5px
+            color: $primary
+            padding: 5px
+            text-align: center
+            position: relative
+            h2
+                font-size: 25px
+            h3
+                color: $accent
+                width: 90%
+                margin: 0 auto
+                line-height: 1.25
+    /*END SUBMIT CONTAINER*/
+@media screen and (max-width: 768px)
+    
+    header
+        width: 100%
+        padding: 10px 20px
+        grid-template-columns: 100px 80px 1fr
+        .header__lang
+            margin: 0
+            margin-top: 50px
+            margin-left: -35px
+        .menu--toggle
+            position: relative
+            display: block
+            text-align: end
+            right: 0
+        #menu
+            background-color: $opacity
+            position: absolute
+            top: 100px
+            height: 0
+            width: 100%
+            overflow: hidden
+            ul
+                padding: 0
+                margin: 0
+                li
+                    display: block
+                    text-align: center
+                    font-size: 20px
+                    border-bottom: 1px solid $accent
+                    a
+                        color: #fff
+    /*END NAV*/
+    main
+        display: block
+        padding: 100px 20px
+        padding-bottom: 30px
+        .main__text
+            width: 100%
+            padding-top: 40px
+            color: #fff
+            font-weight: 800
+            h3
+                font-size: 50px
+                line-height: .1
+            h2
+                font-size: 45px
+                line-height: .2
+            
+        .main__form
+            width: 80%
+            max-width: 300px
+            padding: 10px 35px
+            margin: 20px auto
+            margin-top: 50px
+            input
+                padding: 10px
+                margin-bottom: 15px
+                
+    /*END MAIN*/
+    .icons-container
+        padding: 20px 
+        .icon__love, .icon__sketch, .icon__coin
+            display: flex
+            color: #fff
+            font-size: 20px
+            height: 70px
+            i
+                line-height: 3.5
+                font-size: 20px
+                padding-left: 5px
+        .icon__love
+            align-items: center
+            h3
+                span
+                    display: none
+        .icon__sketch
+            justify-content: center
+            align-items:  center
+        .icon__coin
+            justify-content: flex-end
+            align-items: center
+            padding-left: 5px
+
+        .icon__love
+            h3
+                &::first-letter
+                    text-transform: uppercase
+
+    /*END ICONS*/
+
+    #portfolio
+        padding: 50px 20px
+        .portfolio-container
+            width: 100%
+            margin: 0 auto
+            h2
+            .portfolio__gallery
+                display: flex
+                flex-wrap: wrap
+                text-align: center
+                justify-content: center
+                img
+                    text-align: center
+                    width: 80%
+                    max-width: 400px
+                .gallery__image
+                    width: 45%
+                    min-width: 250px
+                    .image__overlay
+                        width: 80%
+                        height: 100px
+                        margin: 0 auto
+                        position: relative
+                        display: block
+                        opacity: 1
+                        background: none
+    /*END PORTFOLIO*/
+    
+    .about-container
+        padding: 50px 20px
+        h2
+        .about__content
+            flex-wrap: wrap
+            flex-direction: column-reverse
+            .about__text
+                width: 100%
+                padding-top: 15px
+                padding-right: 0
+                    
+            img
+                width: 80%
+                margin: 0 auto
+    /*END ABOUT*/
+
+    .plans-container
+        padding: 50px 20px
+        h2
+            margin-bottom: 40px
+        .plans__flex
+            display: block
+            .plans__element
+                width: 90%
+                max-width: 400px
+                margin: 0 auto
+        .plans__element:nth-child(2)
+            margin-top: 20px
+            margin-bottom: 20px
+
+    /*END PLANS*/
+    footer
+        display: block
+        padding: 20px
+        .footer__img
+            width: 100%
+            text-align: center
+            img
+                width: 60%
+        .footer__information, .footer__contact
+            text-align: center
+        h4
+            color: #fff
+            text-align: center
+            padding: 20px 
+            
+@media screen and (max-width: 500px)
+    main
+        .main__text
+            h3
+                font-size: 30px
+            h2
+                font-size: 28px
+    /*END MAIN*/
+    .loader-container
+        img
+            width: 250px
+    
