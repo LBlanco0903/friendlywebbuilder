@@ -844,17 +844,18 @@ footer .footer__contact ul a:hover {
     padding: 20px;
   }
   .icons-container .icon__love, .icons-container .icon__sketch, .icons-container .icon__coin {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
+    display: block;
+    display: block;
     color: #fff;
     font-size: 20px;
     height: 70px;
+    text-align: center;
   }
   .icons-container .icon__love i, .icons-container .icon__sketch i, .icons-container .icon__coin i {
-    line-height: 3.5;
+    line-height: 1.5;
     font-size: 20px;
-    padding-left: 5px;
+    padding-left: 0;
   }
   .icons-container .icon__love {
     -webkit-box-align: center;
